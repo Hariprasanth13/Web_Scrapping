@@ -1,0 +1,22 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.22:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.2 - - [04/Mar/2023 22:05:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [04/Mar/2023 22:05:02] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [04/Mar/2023 22:05:02] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [04/Mar/2023 22:05:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [04/Mar/2023 22:05:03] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /review [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1845, in finalize_request
+    response = self.make_response(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2137, in make_response
+    raise TypeError(
+TypeError: The view function for 'scrapping' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:172.18.0.2 - - [04/Mar/2023 22:05:07] "[35m[1mPOST /review HTTP/1.1[0m" 500 -
